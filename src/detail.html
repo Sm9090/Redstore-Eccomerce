@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMStore | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Mono:wght@100;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- <div class="header"> -->
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="" width="120px">
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="">home</a></li>
+                        <li><a href="">products</a></li>
+                        <li><a href="">contact us</a></li>
+                        <li><a href="">about</a></li>
+                        <li><a href="">account</a></li>
+                    </ul>
+                </nav>
+                    <img src="../images/cart.png" width="30px" height="30px">
+                    <img src="../images/menu.png" width="30px" class="menu-icon" onclick="menuToggle()">
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    <!-- </div> -->
+    <!-- -------------------single product detail------------------ -->
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="../images/product-1.jpg" alt="" width="80%" id="productImg">
+                <div class="small-container-row">
+                    <div class="small-container-col">
+                        <img src="../images/gallery-1.jpg"  width="100%" class="smallImg">
+                    </div>
+                    <div class="small-container-col">
+                        <img src="../images/gallery-2.jpg" width="100%" class="smallImg">
+                    </div>  
+                    <div class="small-container-col">
+                        <img src="../images/gallery-3.jpg" width="100%" class="smallImg">
+                    </div>  
+                    <div class="small-container-col">
+                        <img src="../images/gallery-4.jpg" width="100%" class="smallImg">
+                    </div> 
+                     
+                </div>
+            </div>
+            <div class="col-2">
+                <p>Home/T-shirt</p>
+                <h1>Green Puma T-shirt by HRX</h1>
+                <h4>$50.00</h4>
+                <select name="" id="" >
+                    <option value=""> Select size</option>
+                    <option value="">XXL</option>
+                    <option value="">XL</option>
+                    <option value="">Large</option>
+                    <option value="">Medium</option>
+                    <option value="">Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">ADD To Cart</a>
+
+                <h3> Product Detail <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus debitis voluptate, ullam vero exercitationem ipsa, explicabo, accusamus corrupti doloribus consectetur sint possimus. At id itaque, eaque odio illum ex voluptate?</p>
+            </div>
+
+        </div>
+    </div>
+    <!-------------------------title------------------>
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p><a href="./product.html">View More</a></p>
+        </div>
+    </div>
+
+<!--------------------products---------------->
+    <div class="small-container">
+        
+        <div class="row" id="products">
+            <div class="col-4">
+                <img src="../images/product-1.jpg" alt="">
+                <h4>Red printed T-shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../images/product-2.jpg" alt="">
+                <h4>hr-X black shoes</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../images/product-3.jpg" alt="">
+                <h4>blackand white shaded paint </h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../images/product-4.jpg" alt="">
+                <h4>simple puma blue T shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- --------------footer-------------------->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download our App for Adnroid and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="../images/play-store.png" alt="">
+                        <img src="../images/app-store.png" alt="">
+
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../images/logo-white.png" alt="">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, dolorum!</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links :</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return policy</li>
+                        <li>join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Download our App</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>instagarm</li>
+                        <li>youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                <p>&copy;copyright 2023</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let productImg = document.getElementById('productImg')
+        let smallImg = document.getElementsByClassName("smallImg")
+
+        for(let i = 0 ; i < smallImg.length ; i++){
+            smallImg[i].onclick = function(){
+                productImg.src = smallImg[i].src
+            }
+        }
+
+    </script>
+
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
