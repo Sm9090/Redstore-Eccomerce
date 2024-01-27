@@ -18,29 +18,37 @@
 
 <body>
     <!-- <div class="header"> -->
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="../images/logo.png" alt="" width="120px">
-                </div>
-                <nav>
-                    <ul id="menuItems">
-                        <li><a href="">home</a></li>
-                        <li><a href="">products</a></li>
-                        <li><a href="">contact us</a></li>
-                        <li><a href="">about</a></li>
-                        <li><a href="">account</a></li>
-                    </ul>
-                </nav>
-                    <img src="../images/cart.png" width="30px" height="30px">
-                    <img src="../images/menu.png" width="30px" class="menu-icon" onclick="menuToggle()">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="" width="120px">
             </div>
-            <div class="row">
-            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="./product.html">products</a></li>
+                    <li><a href="">contact us</a></li>
+                    <li><a href="">about</a></li>
+                    <li id="profile" onclick="handleLocation()"> <span id="userName"> account</span>
+                        <img id="arrow" src="../images/down Arrow.png" alt="" height="15px" onclick="down()">
+                        <div class="profileChild" id="Menu" style="display: none;">
+                            <div class="prof-col-2" onclick="logOut()">logOut</div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="../images/cart.png" width="30px" height="30px">
+            </a>
+            <img src="../images/menu.png" width="30px" class="menu-icon" onclick="menuToggle()">
         </div>
+        <div class="row">
+        </div>
+    </div>
     <!-- </div> -->
 
-    
+
 
     <div class="small-container">
 
@@ -214,14 +222,14 @@
             </div>
         </div>
         <center>
-        <div class="page-btn">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
-            <span>&#8594;</span>
-        </div>
-    </center>
+            <div class="page-btn">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#8594;</span>
+            </div>
+        </center>
     </div>
 
     <!-- --------------footer-------------------->
@@ -269,7 +277,7 @@
     </div>
 
 
-    <script src="../script.js"></script>
+    <script src="../script.js" type="module"></script>
 </body>
 
 </html>

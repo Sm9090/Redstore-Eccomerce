@@ -33,6 +33,7 @@ nav ul li {
     display: inline-block;
     text-transform: capitalize;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 a {
@@ -71,6 +72,7 @@ p {
     color: #ff523b;
     /* width: 9rem; */
     border-bottom: 1px solid #ff523b;
+    cursor: pointer;
 }
 
 /* #Menu div{
@@ -609,6 +611,9 @@ form a{
     .small-container .row-2{
         margin: 40px auto 25px;
 
+    }
+    #userName{
+        color: white;
     }
 
 }

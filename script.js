@@ -1,4 +1,5 @@
-import {auth , onAuthStateChanged ,getUser } from "./firebase/firebase.js";
+import {auth ,getUser,logOut } from "./firebase/firebase.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
 
 
@@ -16,8 +17,6 @@ window.down = ()=>{
 
 onAuthStateChanged(auth, async (user) => {
     if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
         console.log(user)
         const userData = await getUser(uid)
@@ -25,10 +24,9 @@ onAuthStateChanged(auth, async (user) => {
         const arrow = document.getElementById('arrow')
       const userName = document.getElementById('userName')
       userName.innerHTML = userData.userName 
-        //   userName.append(arrow)
-    } else {
-        // User is signed out
-        // ...
+          userName.append(arrow)
+    } else {    
+        location.href = './Accounts/account.html'
     }
 });
 //   
@@ -80,7 +78,7 @@ function getData(){
 const menuItems = document.getElementById('menuItems')
 menuItems.style.maxHeight = "0px";
 
-function menuToggle(){
+window.menuToggle =() =>{
     if(menuItems.style.maxHeight == "0px"){
         menuItems.style.maxHeight = "200px";
     }
@@ -90,4 +88,15 @@ function menuToggle(){
 }
 
 
+window.handleLocation=()=>{
+    const userName = document.getElementById('userName')
+    if(userName.innerHTML === 'accounts'){
+        location.href = './Accounts/account.html'
+    }
 
+}
+
+
+window.logOut =() => {
+    logOut()
+}

@@ -18,26 +18,33 @@
 
 <body>
     <!-- <div class="header"> -->
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="../images/logo.png" alt="" width="120px">
-                </div>
-                <nav>
-                    <ul id="menuItems">
-                        <li><a href="">home</a></li>
-                        <li><a href="">products</a></li>
-                        <li><a href="">contact us</a></li>
-                        <li><a href="">about</a></li>
-                        <li><a href="">account</a></li>
-                    </ul>
-                </nav>
-                    <img src="../images/cart.png" width="30px" height="30px">
-                    <img src="../images/menu.png" width="30px" class="menu-icon" onclick="menuToggle()">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="" width="120px">
             </div>
-            <div class="row">
-            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="./product.html">products</a></li>
+                    <li><a href="">contact us</a></li>
+                    <li><a href="">about</a></li>
+                    <li id="profile" onclick="handleLocation()"> <span id="userName"> account</span>
+                        <img id="arrow" src="../images/down Arrow.png" alt="" height="15px" onclick="down()">
+                        <div class="profileChild" id="Menu" style="display: none;">
+                            <div class="prof-col-2" onclick="logOut()">logOut</div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="../images/cart.png" width="30px" height="30px">
+            </a> <img src="../images/menu.png" width="30px" class="menu-icon" onclick="menuToggle()">
         </div>
+        <div class="row">
+        </div>
+    </div>
     <!-- </div> -->
     <!-- -------------------single product detail------------------ -->
 
@@ -47,25 +54,25 @@
                 <img src="../images/product-1.jpg" alt="" width="80%" id="productImg">
                 <div class="small-container-row">
                     <div class="small-container-col">
-                        <img src="../images/gallery-1.jpg"  width="100%" class="smallImg">
+                        <img src="../images/gallery-1.jpg" width="100%" class="smallImg">
                     </div>
                     <div class="small-container-col">
                         <img src="../images/gallery-2.jpg" width="100%" class="smallImg">
-                    </div>  
+                    </div>
                     <div class="small-container-col">
                         <img src="../images/gallery-3.jpg" width="100%" class="smallImg">
-                    </div>  
+                    </div>
                     <div class="small-container-col">
                         <img src="../images/gallery-4.jpg" width="100%" class="smallImg">
-                    </div> 
-                     
+                    </div>
+
                 </div>
             </div>
             <div class="col-2">
                 <p>Home/T-shirt</p>
                 <h1>Green Puma T-shirt by HRX</h1>
                 <h4>$50.00</h4>
-                <select name="" id="" >
+                <select name="" id="">
                     <option value=""> Select size</option>
                     <option value="">XXL</option>
                     <option value="">XL</option>
@@ -78,7 +85,9 @@
 
                 <h3> Product Detail <i class="fa fa-indent"></i></h3>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus debitis voluptate, ullam vero exercitationem ipsa, explicabo, accusamus corrupti doloribus consectetur sint possimus. At id itaque, eaque odio illum ex voluptate?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus debitis voluptate, ullam
+                    vero exercitationem ipsa, explicabo, accusamus corrupti doloribus consectetur sint possimus. At id
+                    itaque, eaque odio illum ex voluptate?</p>
             </div>
 
         </div>
@@ -91,9 +100,9 @@
         </div>
     </div>
 
-<!--------------------products---------------->
+    <!--------------------products---------------->
     <div class="small-container">
-        
+
         <div class="row" id="products">
             <div class="col-4">
                 <img src="../images/product-1.jpg" alt="">
@@ -147,7 +156,7 @@
                 <p>$50.00</p>
             </div>
         </div>
-        
+
     </div>
 
     <!-- --------------footer-------------------->
@@ -197,8 +206,8 @@
         let productImg = document.getElementById('productImg')
         let smallImg = document.getElementsByClassName("smallImg")
 
-        for(let i = 0 ; i < smallImg.length ; i++){
-            smallImg[i].onclick = function(){
+        for (let i = 0; i < smallImg.length; i++) {
+            smallImg[i].onclick = function () {
                 productImg.src = smallImg[i].src
             }
         }
@@ -206,7 +215,8 @@
     </script>
 
 
-    <script src="../script.js"></script>
+    <script src="../script.js" type="module"></script>
+
 </body>
 
 </html>

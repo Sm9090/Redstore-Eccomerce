@@ -1,5 +1,5 @@
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+  import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword, onAuthStateChanged , signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
   import {  getFirestore ,collection, addDoc ,getDoc ,doc,setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
   const firebaseConfig = {
@@ -22,12 +22,11 @@ async function onRegister(user){
   const { email  , password , userName , phoneNumber} = user
 
   console.log('user 1 ==>' + user)
-
   createUserWithEmailAndPassword(auth, email, password )
   .then(async(userCredential) => {
-  const user = await userCredential.user;
+  const user =  userCredential.user;
   console.log('authentication user ==>' + user)
-  // alert('Register sucessfully')
+  console.log(user.uid)
   try {
     const docRef = await setDoc(doc(db, "users",user.uid), {
       email,
@@ -77,6 +76,11 @@ async function getUser(uid) {
       }
     }
 
+    function logOut(){
+      return signOut(auth)
+    }
+    
+
 
   export{
 
@@ -85,4 +89,5 @@ async function getUser(uid) {
     auth,
     onAuthStateChanged,
     getUser,
+    logOut,
   }

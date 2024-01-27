@@ -78,35 +78,14 @@ loginFoam?.addEventListener('submit', (e)=>{
             indicator.style.transform = 'translateX(100px)'
         }
 
-
-
-
-        // if(!fullName.value || !email.value || !password.value || !confirmPassword.value){
-        //     alert('Please fill the all input')
-        //     return;
-        // }
-    
-        // if(fullName.value.length <= 1 ){
-        //     let err = document.getElementById('hide')
-        //     err.className = ''
-        //     // alert('Please put your name atleast 2 character')
-        //     return;
-        // }else if(fullName.value.length > 1){
-        //     let err = document.getElementById('hide')
-        //     err.className = 'display-none'
-        // }
-    
-        // if(password.value != confirmPassword.value){
-        //     alert('Password not match')
-        //     return;
-        // }
-    
-        // if(!regex.test(email.value)){
-        //     alert('please input valid email address')
-        //     return;
-        // }
-    
-        // if(password.value.length < 8){
-        //     alert('please enter atleast 8 characters long password')
-        //     return;
-        // }
+        const menuItems = document.getElementById('menuItems')
+        menuItems.style.maxHeight = "0px";
+        
+    window.menuToggle=()=>{
+            if(menuItems.style.maxHeight == "0px"){
+                menuItems.style.maxHeight = "200px";
+            }
+            else{
+                menuItems.style.maxHeight = "0px";
+            }
+        }

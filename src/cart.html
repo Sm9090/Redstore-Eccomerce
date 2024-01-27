@@ -18,26 +18,33 @@
 
 <body>
     <!-- <div class="header"> -->
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <img src="../images/logo.png" alt="" width="120px">
-                </div>
-                <nav>
-                    <ul id="menuItems">
-                        <li><a href="">home</a></li>
-                        <li><a href="">products</a></li>
-                        <li><a href="">contact us</a></li>
-                        <li><a href="">about</a></li>
-                        <li><a href="">account</a></li>
-                    </ul>
-                </nav>
-                    <img src="../images/cart.png" width="30px" height="30px">
-                    <img src="../images/menu.png" width="30px" class="menu-icon" onclick="menuToggle()">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="" width="120px">
             </div>
-            <div class="row">
-            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="./product.html">products</a></li>
+                    <li><a href="">contact us</a></li>
+                    <li><a href="">about</a></li>
+                    <li id="profile" onclick="handleLocation()"> <span id="userName"> account</span>
+                        <img id="arrow" src="../images/down Arrow.png" alt="" height="15px" onclick="down()">
+                        <div class="profileChild" id="Menu" style="display: none;">
+                            <div class="prof-col-2" onclick="logOut()">logOut</div>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="../images/cart.png" width="30px" height="30px">
+            </a> <img src="../images/menu.png" width="30px" class="menu-icon" onclick="menuToggle()">
         </div>
+        <div class="row">
+        </div>
+    </div>
     <!-- </div> -->
 
     <!-- ----------------------cart items --------------------- -->
@@ -47,72 +54,72 @@
 
         <table>
             <thead>
-            <tr>
-                <th>Product Name</th>
-                <th>Quantity</th>
-                <th>subTotal</th>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>subTotal</th>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="cart-info">
-                    <img src="../images/buy-1.jpg" alt="">
-                    <div>
-                        <p>Red Printed T-shirt</p>
-                        <small>Price: 50.00$</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>50.00$</td>
-            </tr>
-            <tr>
-                <td class="cart-info">
-                    <img src="../images/buy-3.jpg" alt="">
-                    <div>
-                        <p>Grey chino Paint</p>
-                        <small>Price: 40.00$</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>40.00$</td>
-            </tr>
-            <tr>
-                <td class="cart-info">
-                    <img src="../images/buy-2.jpg" alt="">
-                    <div>
-                        <p>Black shoes with green soul</p>
-                        <small>Price: 75.00$</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>75.00$</td>
-            </tr>
-        </tbody>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="cart-info">
+                        <img src="../images/buy-1.jpg" alt="">
+                        <div>
+                            <p>Red Printed T-shirt</p>
+                            <small>Price: 50.00$</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>50.00$</td>
+                </tr>
+                <tr>
+                    <td class="cart-info">
+                        <img src="../images/buy-3.jpg" alt="">
+                        <div>
+                            <p>Grey chino Paint</p>
+                            <small>Price: 40.00$</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>40.00$</td>
+                </tr>
+                <tr>
+                    <td class="cart-info">
+                        <img src="../images/buy-2.jpg" alt="">
+                        <div>
+                            <p>Black shoes with green soul</p>
+                            <small>Price: 75.00$</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>75.00$</td>
+                </tr>
+            </tbody>
         </table>
         <!-----------------------Total price------------------------->
         <div class="total-price">
-        <table >
-            <tr>
-                <td>SubTotal</td>
-                <td>$200</td>
-            </tr>
-            <tr>
-                <td>Tax</td>
-                <td>$30</td>
-            </tr>
-            <tr>
-                <td>SubTotal</td>
-                <td>$230</td>
-            </tr>
-        </table>
-    </div>
+            <table>
+                <tr>
+                    <td>SubTotal</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>SubTotal</td>
+                    <td>$230</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <!-- --------------footer-------------------->
@@ -159,11 +166,11 @@
         </div>
     </div>
     <script>
-        
+
     </script>
 
 
-    <script src="../script.js"></script>
+    <script src="../script.js" type="module"></script>
 </body>
 
 </html>
